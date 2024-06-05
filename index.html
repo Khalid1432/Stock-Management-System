@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Stock Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Management System</h1>
+        <form id="stockForm">
+            <input type="text" id="itemName" placeholder="Item Name" required>
+            <input type="number" id="itemQuantity" placeholder="Quantity" required>
+            <input type="text" id="itemCategory" placeholder="Category" required>
+            <button type="submit">Add Item</button>
+        </form>
+        <input type="text" id="search" placeholder="Search items...">
+        <button id="toggleView">Switch to List View</button>
+        <div id="sorting">
+            <label for="sortCategory">Sort by:</label>
+            <select id="sortCategory">
+                <option value="name">Name</option>
+                <option value="quantity">Quantity</option>
+                <option value="category">Category</option>
+            </select>
+        </div>
+        <div id="tableView">
+            <table id="stockTable">
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Category</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Stock items will be added here -->
+                </tbody>
+            </table>
+            <div id="pagination">
+                <button id="prevPage">Previous</button>
+                <span id="pageInfo"></span>
+                <button id="nextPage">Next</button>
+            </div>
+        </div>
+        <div id="listView" style="display: none;">
+            <ul id="stockList">
+                <!-- Stock items will be added here -->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
